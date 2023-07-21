@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+  <title>Student Registration</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <title>Demo</title>
+
+  <style type="text/css">
+    section
+    {
+      margin-top: -20px;
+    }
+  </style>   
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand active">ONLINE LIBRARY MANAGEMENT SYSTEM</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/blist">BOOKS</a></li>
+            <li><a href="/feed">FEEDBACK</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
+            <li><a href="/"><span class="glyphicon glyphicon-log-out"> LOGOUT</span></a></li>
+            <li><a href="/sign"><span class="glyphicon glyphicon-user">SIGN UP</span></a></li>
+          </ul>
+
+      </div>
+    </nav>
+<section>
+  <div class="reg_img">
+    <div class="box2">
+        <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1>
+        <h1 style="text-align: center; font-size: 25px;">Registration Form</h1>
+
+      <form action="#" th:action="@{/edit}" method="post" th:object="${updtdata}">
+        
+        <div class="regis">
+           <input type="hidden" name="id" th:value="${updtdata.id}">
+          <input class="form-control" type="text" name="studentregid" th:value="${updtdata.studentregid}" placeholder="Student-regid" required=""><br>
+          <input class="form-control" type="text" name="fn" th:value="${updtdata.fn}" placeholder="First Name" required=""> <br>
+          <input class="form-control" type="text" name="ln" th:value="${updtdata.ln}" placeholder="Last Name" required=""> <br>
+          <input class="form-control" type="text" name="urname" th:value="${updtdata.urname}" placeholder="Username" required=""> <br>
+          <input class="form-control" type="password" name="pass" th:value="${updtdata.pass}" placeholder="Password" required=""> <br>
+          <input class="form-control" type="email" name="email" th:value="${updtdata.email}" placeholder="Email" required=""><br>
+
+          <input class="btn btn-default" type="submit" name="submit" value="Sign Up" style="color: black; width: 70px; height: 30px"> </div>
+      </form>
+     
+    </div>
+  </div>
+</section>
+</body>
+</html>

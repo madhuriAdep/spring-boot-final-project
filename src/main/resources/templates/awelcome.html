@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+     
+  <style type="text/css">
+    section
+    {
+      margin-top: -20px;
+    }
+    .center {
+        text-align: center;
+         border: 3px solid black;
+    }
+    #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+  </style>   
+</head>
+
+<body>    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand active">BOOKS LIBRARY MANAGEMENT SYSTEM</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="/">HOME</a></li>
+              <li><a href="/addbook">ADD BOOKS</a></li>
+              <li><a href="/issue">ISSUE BOOKS</a></li>
+              <li><a href="/return">RETURN BOOKS</a></li>
+              <li><a href="#" th:href="@{/list}">REGISTER USERS</a></li>
+            </ul>
+  
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="/login"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li> -->
+              <!-- <li><a href="/feed"><span class="glyphicon glyphicon-log-out"> FEEDBACK</span></a></li> -->
+              <li><a href="/"><span class="glyphicon glyphicon-log-out"> LOGOUT</span></a></li>
+              <!-- <li><a href="/sign"><span class="glyphicon glyphicon-user">SIGN UP</span></a></li> -->
+            </ul>
+        </div>
+    </nav>   
+
+    <div class="center">
+        <h1>WELCOME!</h1>
+        <h2 th:text="${username}"></h2>
+    </div><br><br>
+
+    <table id="customers">
+      <h2 align="center">Book Avilable</h2>
+      <tr>
+        <th>ID</th>
+        <th>BID</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Edition</th>
+        <th>Status</th>
+        
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>01</td>
+        <td>Principal of fundamental</td>
+        <td>k.k.sam</td>
+        <td>3rd</td>
+        <td>Avilable</td>
+        
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>02</td>
+        <td>reference of java</td>
+        <td>V.k.rao</td>
+        <td>2rd</td>
+        <td>Avilable</td>
+       
+        
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>03</td>
+        <td>complete c++ reference</td>
+        <td>venkat rao</td>
+        <td>4rd</td>
+        <td>Avilable</td>
+       
+    </tr>
+  </table>
+</body>
+</html>

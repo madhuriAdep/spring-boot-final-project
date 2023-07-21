@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+
+  <title>Student Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+<style type="text/css">
+    section
+    {
+      margin-top: -20px;
+    }
+    /* .container {
+      position: relative;
+      font-family: Arial;
+    }
+    form .feedback{
+     margin: auto 70px;
+      margin-top: 10px;
+    }
+   .wrapper{
+      padding: 10px;
+      margin: 20px auto;
+      width: 900px;
+      height: 500px;
+      background-color: black;
+      opacity: .6;
+      color: wheat;
+   } */
+</style>   
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand active">BOOKS LIBRARY MANAGEMENT SYSTEM</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">HOME</a></li>
+            <!-- <li><a href="/blist">BOOKS</a></li> -->
+            <li><a href="/feed">FEEDBACK</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
+            <!-- <li><a href="/"><span class="glyphicon glyphicon-log-out"> LOGOUT</span></a></li> -->
+            <!-- <li><a href="/sign"><span class="glyphicon glyphicon-user">SIGN UP</span></a></li> -->
+          </ul>
+      </div>
+    </nav>
+    <section>
+        <div class="feed_img">
+         <br>
+          <div class="feedcont">
+              <h1 style="text-align: center; font-size: 35px;font-family: Lucida Console;">Library Management System</h1>
+              <h1 style="text-align: center; font-size: 25px;">Feedback Form</h1><br>
+            <form  name="login" action="" method="">
+              
+              <div class="feed">
+                <label>You have any Requirements?</label>
+                <input class="form-control" type="text" name="requriment" placeholder="write requirement...."> <br>
+                <label>You like the service provided by us?</label>
+                <input class="form-control" type="text" name="opinion" placeholder="write ...."> <br>
+                
+                <label>You have any suggestions for us?</label>
+                <textarea class="form-control" type="textarea" name="comment" placeholder="write suggestions...."></textarea><br>
+                <button id="submitForm" style="color: black; width: 70px; height: 30px">Submit</button>
+                <!-- <input class="btn btn-default" type="submit" id="submitForm" name="submit" value="submit" style="color: black; width: 70px; height: 30px">  -->
+              </div>
+            
+          </form>
+          </div>
+        </div>
+      </section>
+
+      <script>
+          $("#submitForm").click(function() {
+            alert("The feedback has been Submitted.");
+          });
+      </script>
+</body>
+</html>
